@@ -1,0 +1,25 @@
+body {
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 10px auto;
+}
+td,
+th {
+  border: 1px solid #555;
+  padding: 4px;
+  text-align: center;
+}
+tr:hover {
+  background: #f0f0f0;
+}
+td:hover {
+  background: #e0ffe0;
+  cursor: pointer;
+}
+th {
+  background: #ddd;
+}
