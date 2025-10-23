@@ -1,47 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabels</title>
 
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <h2>Table 3</h2>
-    <table>
-      <tr>
-        <td rowspan="2">1a coluna 1 linha<br />1 coluna 2 linha</td>
-        <td colspan="2">2 3 coluna 1 linha</td>
-      </tr>
-      <tr>
-        <td>2 coluna 2 linha<br />2 coluna 3 linha</td>
-        <td>3 coluna 2 3 linha</td>
-      </tr>
-    </table>
-    <h2>Table 6</h2>
-    <table>
-      <tr>
-        <th colspan="4">Header com 4 colunas na 1ª linha</th>
-        <th colspan="2">Outro header</th>
-      </tr>
-      <tr>
-        <td colspan="2">2ª e 3ª linhas e 2 colunas</td>
-        <td colspan="2">2ª e 3ª linha 3ª coluna</td>
-        <td>2ª linha 4ª coluna</td>
-        <td>3ª linha 4ª coluna</td>
-      </tr>
-      <tr>
-        <td colspan="2">4ª linha 1ª coluna</td>
-        <td colspan="2">4ª linha 2ª coluna</td>
-        <td colspan="2">2ª 3ª e 4ª linha e 5ª coluna</td>
-      </tr>
-      <tr>
-        <td colspan="2">5ª linha 1ª 2ª e 3ª coluna</td>
-        <td>5ª linha 4ª coluna</td>
-        <td>5ª linha 5ª coluna</td>
-        <td colspan="2">5ª linha 6ª coluna</td>
-      </tr>
-    </table>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Tables</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="easter-egg-indicator" id="easterEggIndicator">🥚</div>
+  <div class="secret-message" id="secretMessage">You found a secret! 🎉</div>
+  <h2>Table 3</h2>
+  <table class="interactive-table" data-table="3">
+    <tr>
+      <td rowspan="2" class="clickable-cell" data-secret="konami">1a coluna 1 linha<br />1 coluna 2 linha</td>
+      <td colspan="2" class="clickable-cell">2 3 coluna 1 linha</td>
+    </tr>
+    <tr>
+      <td class="clickable-cell">2 coluna 2 linha<br />2 coluna 3 linha</td>
+      <td class="clickable-cell" data-secret="rainbow">3 coluna 2 3 linha</td>
+    </tr>
+  </table>
+
+  <h2>Table 4</h2>
+  <table class="interactive-table" data-table="4">
+    <tr>
+      <td rowspan="3" class="clickable-cell">1a coluna 1 linha</td>
+      <td class="clickable-cell">2ª linha 1ª coluna</td>
+      <td class="clickable-cell">2ª linha 2ª coluna</td>
+    </tr>
+    <tr>
+      <td class="clickable-cell">3ª linha 1ª coluna</td>
+      <td class="clickable-cell">3ª linha 2ª coluna</td>
+    </tr>
+    <tr>
+      <td class="clickable-cell">3ª linha 2ª coluna</td>
+      <td class="clickable-cell">3ª linha 3ª coluna</td>
+    </tr>
+  </table>
+
+  <h2>Table 5 - Horário</h2>
+  <table class="schedule-table interactive-table" data-table="5">
+    <tr>
+      <th>Dia/Horas</th>
+      <th class="time-slot">9:00-10:00</th>
+      <th class="time-slot">10:00-11:00</th>
+      <th class="time-slot">11:00-12:00</th>
+      <th class="time-slot">12:00-14:00</th>
+      <th class="time-slot">14:00-15:00</th>
+      <th class="time-slot">15:00-16:00</th>
+      <th class="time-slot">16:00-17:00</th>
+      <th class="time-slot">17:00-18:00</th>
+    </tr>
+    <tr>
+      <th>Segunda</th>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell lunch-break" colspan="1">🍽️</td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell">EST<br>S08</td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+    </tr>
+    <tr>
+      <th>Terça</th>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell lunch-break">🍽️</td>
+      <td class="schedule-cell" rowspan="4">A<br>L<br>M<br>O<br>Ç<br>O</td>
+      <td class="schedule-cell">RCD I<br>L01</td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+    </tr>
+    <tr>
+      <th>Quarta</th>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell lunch-break">🍽️</td>
+      <td class="schedule-cell">AMS<br>L03</td>
+      <td class="schedule-cell">ASI<br>L03</td>
+      <td class="schedule-cell"></td>
+    </tr>
+    <tr>
+      <th>Quarta</th>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell lunch-break">🍽️</td>
+      <td class="schedule-cell">PWC<br>L04</td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+    </tr>
+    <tr>
+      <th>Sexta</th>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell lunch-break">🍽️</td>
+      <td class="schedule-cell">POO<br>L04</td>
+      <td class="schedule-cell"></td>
+      <td class="schedule-cell"></td>
+    </tr>
+  </table>
+
+  <h2>Table 6</h2>
+  <table class="interactive-table" data-table="6">
+    <tr>
+      <th colspan="4" class="clickable-cell" data-secret="disco">Header com 4 colunas na 1ª linha</th>
+      <th colspan="2" class="clickable-cell">Outro header</th>
+    </tr>
+    <tr>
+      <td colspan="2" class="clickable-cell">2ª e 3ª linhas e 2 colunas</td>
+      <td colspan="2" class="clickable-cell">2ª e 3ª linha 3ª coluna</td>
+      <td class="clickable-cell">2ª linha 4ª coluna</td>
+      <td class="clickable-cell">3ª linha 4ª coluna</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="clickable-cell">4ª linha 1ª coluna</td>
+      <td colspan="2" class="clickable-cell">4ª linha 2ª coluna</td>
+      <td colspan="2" class="clickable-cell">2ª 3ª e 4ª linha e 5ª coluna</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="clickable-cell">5ª linha 1ª 2ª e 3ª coluna</td>
+      <td class="clickable-cell">5ª linha 4ª coluna</td>
+      <td class="clickable-cell">5ª linha 5ª coluna</td>
+      <td colspan="2" class="clickable-cell" data-secret="matrix">5ª linha 6ª coluna</td>
+    </tr>
+  </table>
+
+  <script src="js/interactions.js"></script>
+</body>
+
 </html>
