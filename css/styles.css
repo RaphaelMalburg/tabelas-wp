@@ -186,3 +186,8 @@ body.dark-mode th {
 body.dark-mode .clickable-cell:hover {
   background: linear-gradient(45deg, #004400, #006600);
 }
+
+/* Equal width cells for Quarta row */
+.equal-width {
+  width: 16.66%;
+}
