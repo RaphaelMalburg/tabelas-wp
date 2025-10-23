@@ -1,3 +1,6 @@
+// Debug: Log that the file is loading
+console.log('🎮 interactions.js is loading...');
+
 // Interactive Tables with Easter Eggs
 // This is the main class that handles all the cool stuff on the tables
 class TableInteractions {
@@ -529,19 +532,30 @@ class TableGames {
 // DOMContentLoaded fires when the HTML is fully loaded
 // We wait for this so all the elements exist before we try to use them
 document.addEventListener('DOMContentLoaded', () => {
-    // Create new instances of our classes
-    // This starts up all the interactive features
-    new TableInteractions(); // Main interactions
-    new TableGames(); // Games like tic-tac-toe
+    console.log('🎮 DOM loaded, initializing...');
 
-    // Print helpful hints to the browser console
-    // Open DevTools (F12) to see these!
-    console.log('🎮 Easter Eggs Available:');
-    console.log('- Try the Konami Code: ↑↑↓↓←→←→BA');
-    console.log('- Click cells with special data attributes');
-    console.log('- Double-click tables for spin effect');
-    console.log('- Triple-click same cell for special effect');
-    console.log('- Ctrl+M for memory game');
-    console.log('- Click empty schedule cells for tic-tac-toe');
-    console.log('- Time-based effects (night mode, lunch animations)');
+    try {
+        // Create new instances of our classes
+        // This starts up all the interactive features
+        new TableInteractions(); // Main interactions
+        console.log('✅ TableInteractions initialized');
+
+        new TableGames(); // Games like tic-tac-toe
+        console.log('✅ TableGames initialized');
+
+        // Print helpful hints to the browser console
+        // Open DevTools (F12) to see these!
+        console.log('🎮 Easter Eggs Available:');
+        console.log('- Try the Konami Code: ↑↑↓↓←→←→BA');
+        console.log('- Click cells with special data attributes');
+        console.log('- Double-click tables for spin effect');
+        console.log('- Triple-click same cell for special effect');
+        console.log('- Ctrl+M for memory game');
+        console.log('- Click empty schedule cells for tic-tac-toe');
+        console.log('- Time-based effects (night mode, lunch animations)');
+
+        console.log('✅ All features loaded successfully!');
+    } catch (error) {
+        console.error('❌ Error initializing:', error);
+    }
 });
