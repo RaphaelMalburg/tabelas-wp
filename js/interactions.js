@@ -250,7 +250,7 @@ class TableInteractions {
             }, index * 100);
         });
 
-        // Reset after 10 seconds
+        // Reset after 2 seconds
         setTimeout(() => {
             document.body.style.animation = '';
             document.querySelectorAll('.interactive-table').forEach(table => {
@@ -259,7 +259,7 @@ class TableInteractions {
             document.querySelectorAll('.clickable-cell').forEach(cell => {
                 cell.classList.remove('rainbow-mode');
             });
-        }, 10000);
+        }, 2000);
     }
 
     checkClickPatterns() {
