@@ -305,63 +305,11 @@ class TableInteractions {
     }
 }
 
-// Additional fun features
-class TableGames {
-    constructor() {
-        this.setupTableGames();
-    }
 
-    setupTableGames() {
-        // Memory game with cells
-        this.setupMemoryGame();
-    }
-
-    setupMemoryGame() {
-        let sequence = [];
-        let playerSequence = [];
-        let isPlaying = false;
-
-        // Add memory game trigger
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'm') {
-                this.startMemoryGame();
-            }
-        });
-    }
-
-    startMemoryGame() {
-        const cells = document.querySelectorAll('.clickable-cell');
-        const sequence = [];
-
-        // Generate random sequence
-        for (let i = 0; i < 5; i++) {
-            sequence.push(cells[Math.floor(Math.random() * cells.length)]);
-        }
-
-        // Show sequence
-        sequence.forEach((cell, index) => {
-            setTimeout(() => {
-                cell.style.background = '#ffff00';
-                setTimeout(() => {
-                    cell.style.background = '';
-                }, 500);
-            }, index * 600);
-        });
-
-        // TODO: Add player input validation
-        document.getElementById('secretMessage').textContent = '🧠 Memory game started! Remember the sequence!';
-        document.getElementById('secretMessage').style.display = 'block';
-
-        setTimeout(() => {
-            document.getElementById('secretMessage').style.display = 'none';
-        }, 3000);
-    }
-}
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new TableInteractions();
-    new TableGames();
 
     // Add some helpful hints
     console.log('🎮 Easter Eggs Available:');
@@ -369,6 +317,5 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('- Click cells with special data attributes');
     console.log('- Double-click tables for spin effect');
     console.log('- Triple-click same cell for special effect');
-    console.log('- Ctrl+M for memory game');
     console.log('- Time-based effects (night mode, lunch animations)');
 });

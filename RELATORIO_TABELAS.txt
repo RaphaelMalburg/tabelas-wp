@@ -84,9 +84,8 @@ Implementado automaticamente entre 22h e 6h:
 4. INTERATIVIDADE JAVASCRIPT
 
 4.1 Arquitetura do Código
-O JavaScript está organizado em duas classes principais:
+O JavaScript está organizado em uma classe principal:
 - TableInteractions: Gerencia todas as interações com as tabelas
-- TableGames: Implementa o jogo de memória
 
 4.2 Funcionalidades Implementadas
 
@@ -135,11 +134,7 @@ Sistema detecta cliques repetidos:
 - Mantém histórico dos últimos 5 cliques
 - Feedback visual com mensagem secreta
 
-4.2.8 Jogo de Memória
-Ativado com Ctrl+M:
-- Gera sequência aleatória de 5 células
-- Células piscam em amarelo em sequência
-- Desafia o usuário a memorizar o padrão
+
 
 ---
 
