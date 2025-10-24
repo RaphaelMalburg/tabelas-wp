@@ -1,0 +1,202 @@
+/*EXERCICIOS - TABELAS COMPLEXAS*/
+/*Raphael, Raquel, André - GROUP C*/
+/*WEB PROGRAMING OCTOBER 2025*/
+
+body {
+  background: #fafafa;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow-x: auto;
+}
+
+/* Easter Egg Indicators */
+.easter-egg-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  animation: bounce 2s infinite;
+}
+
+.secret-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  z-index: 1001;
+  display: none;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* Table Styling */
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;;
+}
+
+
+
+.interactive-table {
+  position: relative;
+}
+
+.interactive-table:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+td, th {
+  border: 1px solid #555;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.clickable-cell {
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickable-cell:hover {
+  background: linear-gradient(45deg, #e0ffe0, #d0ffd0);
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.clickable-cell:active {
+  transform: scale(0.95);
+}
+
+th {
+  background: linear-gradient(135deg, #ddd, #bbb);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Schedule Table Specific */
+.schedule-table {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  table-layout: fixed;
+}
+
+.schedule-cell {
+  min-height: 40px;
+  vertical-align: middle;
+}
+
+.lunch-break {
+  background: linear-gradient(45deg, #fff3cd, #ffeaa7);
+}
+
+.time-slot {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 12px;
+}
+
+/* Animation Classes */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+}
+
+@keyframes rainbow {
+  0% { background: #ff0000; }
+  16% { background: #ff8000; }
+  33% { background: #ffff00; }
+  50% { background: #00ff00; }
+  66% { background: #0080ff; }
+  83% { background: #8000ff; }
+  100% { background: #ff0000; }
+}
+
+@keyframes disco {
+  0% { background: #ff0080; transform: rotate(0deg); }
+  25% { background: #80ff00; transform: rotate(90deg); }
+  50% { background: #0080ff; transform: rotate(180deg); }
+  75% { background: #ff8000; transform: rotate(270deg); }
+  100% { background: #ff0080; transform: rotate(360deg); }
+}
+
+@keyframes matrix {
+  0% { background: #000; color: #00ff00; }
+  50% { background: #001100; color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+  100% { background: #000; color: #00ff00; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Easter Egg Themes */
+.rainbow-mode {
+  animation: rainbow 2s infinite;
+}
+
+.disco-mode {
+  animation: disco 1s infinite;
+}
+
+.matrix-mode {
+  animation: matrix 1s infinite;
+  font-family: 'Courier New', monospace;
+}
+
+.shake-mode {
+  animation: shake 0.5s infinite;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode table {
+  background: #2d2d2d;
+}
+
+body.dark-mode td, body.dark-mode th {
+  border-color: #555;
+  background: #333;
+}
+
+body.dark-mode th {
+  background: linear-gradient(135deg, #444, #222);
+}
+
+body.dark-mode .clickable-cell:hover {
+  background: linear-gradient(45deg, #004400, #006600);
+}
+
+/* Makes the text appear in a vertical orientation*/
+.verticalText {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 28px; /* Adjusting font size to match the exercise*/
+    font-weight: bold;
+}
