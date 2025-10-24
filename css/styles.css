@@ -1,3 +1,7 @@
+/*EXERCICIOS - TABELAS COMPLEXAS*/
+/*Raphael, Raquel, André - GROUP C*/
+/*WEB PROGRAMING OCTOBER 2025*/
+
 body {
   background: #fafafa;
   font-family: 'Arial', sans-serif;
@@ -40,8 +44,10 @@ table {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;;
 }
+
+
 
 .interactive-table {
   position: relative;
@@ -85,6 +91,7 @@ th {
 /* Schedule Table Specific */
 .schedule-table {
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  table-layout: fixed;
 }
 
 .schedule-cell {
@@ -94,7 +101,6 @@ th {
 
 .lunch-break {
   background: linear-gradient(45deg, #fff3cd, #ffeaa7);
-  font-size: 18px;
 }
 
 .time-slot {
@@ -187,7 +193,10 @@ body.dark-mode .clickable-cell:hover {
   background: linear-gradient(45deg, #004400, #006600);
 }
 
-/* Equal width cells for Quarta row */
-.equal-width {
-  width: 16.66%;
+/* Makes the text appear in a vertical orientation*/
+.verticalText {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 28px; /* Adjusting font size to match the exercise*/
+    font-weight: bold;
 }

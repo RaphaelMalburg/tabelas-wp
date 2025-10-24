@@ -1,3 +1,7 @@
+//EXERCICIOS - TABELAS COMPLEXAS//
+//Raphael, Raquel, André - GROUP C//
+//WEB PROGRAMING OCTOBER 2025//
+
 // Interactive Tables with Easter Eggs
 class TableInteractions {
     constructor() {
@@ -308,29 +312,8 @@ class TableGames {
     }
 
     setupTableGames() {
-        // Tic-tac-toe in empty schedule cells
-        this.setupTicTacToe();
-
         // Memory game with cells
         this.setupMemoryGame();
-    }
-
-    setupTicTacToe() {
-        const emptyCells = document.querySelectorAll('.schedule-cell:empty');
-        let currentPlayer = 'X';
-
-        emptyCells.forEach(cell => {
-            cell.addEventListener('click', () => {
-                if (cell.textContent === '') {
-                    cell.textContent = currentPlayer;
-                    cell.style.fontSize = '24px';
-                    cell.style.fontWeight = 'bold';
-                    cell.style.color = currentPlayer === 'X' ? '#ff6b6b' : '#4834d4';
-
-                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-                }
-            });
-        });
     }
 
     setupMemoryGame() {
@@ -387,6 +370,5 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('- Double-click tables for spin effect');
     console.log('- Triple-click same cell for special effect');
     console.log('- Ctrl+M for memory game');
-    console.log('- Click empty schedule cells for tic-tac-toe');
     console.log('- Time-based effects (night mode, lunch animations)');
 });

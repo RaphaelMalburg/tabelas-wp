@@ -1,0 +1,184 @@
+RELATÓRIO - PROJETO DE TABELAS INTERATIVAS
+Disciplina: Programação Web
+Grupo: Raphael, Raquel, André - Grupo C
+Data: Outubro 2025
+
+---
+
+1. INTRODUÇÃO
+
+Este projeto demonstra a criação de tabelas HTML complexas com recursos avançados de estilização CSS e interatividade JavaScript. O objetivo principal foi explorar diferentes estruturas de tabelas utilizando colspan e rowspan, aplicar estilos visuais modernos e implementar funcionalidades interativas que melhoram a experiência do usuário.
+
+O desenvolvimento focou em criar não apenas tabelas funcionais, mas uma experiência web completa que combina estruturação de dados, design visual atrativo e interações que surpreendem o usuário.
+
+---
+
+2. ESTRUTURA HTML - TABELAS IMPLEMENTADAS
+
+2.1 Tabela 3 - Estrutura Básica com Mesclagem
+Esta tabela demonstra o uso fundamental de rowspan e colspan:
+- Linha 1: Primeira célula ocupa 2 linhas (rowspan="2"), segunda célula ocupa 2 colunas (colspan="2")
+- Linha 2: Duas células normais que completam a estrutura
+- Aplicação prática: Útil para cabeçalhos agrupados ou dados hierárquicos
+
+2.2 Tabela 4 - Mesclagem Vertical
+Estrutura com 3 linhas onde a primeira coluna se estende verticalmente:
+- Primeira célula usa rowspan="3" para ocupar toda a altura
+- Demonstra organização de dados com categorias principais e subcategorias
+- Aplicação prática: Ideal para listas de produtos categorizados ou organogramas
+
+2.3 Tabela 5 - Horário Escolar
+A tabela mais complexa do projeto, representa um horário semanal completo:
+- Cabeçalho: Dias da semana e faixas horárias (9h às 18h)
+- Coluna de almoço: Usa rowspan="5" para ocupar todos os dias
+- Disciplinas: EST, RCD-I, AMS, ASI, PWC, POO distribuídas pela semana
+- Células vazias: Representam horários livres
+- Aplicação prática: Sistemas de gestão acadêmica, calendários, agendas
+
+2.4 Tabela 6 - Estrutura Complexa
+Tabela com múltiplas mesclagens demonstrando layouts avançados:
+- Cabeçalho com colspan="4" e colspan="2"
+- Combinação de células ocupando múltiplas linhas e colunas
+- Estrutura irregular simulando layouts de relatórios complexos
+- Aplicação prática: Relatórios financeiros, dashboards, formulários complexos
+
+---
+
+3. ESTILIZAÇÃO CSS
+
+3.1 Design Visual Moderno
+O projeto implementa um design contemporâneo com:
+- Sombras suaves (box-shadow) para criar profundidade
+- Gradientes lineares nos cabeçalhos e células especiais
+- Bordas arredondadas (border-radius) para aparência moderna
+- Transições suaves (transition) em todas as interações
+
+3.2 Efeitos de Hover
+As células clicáveis possuem feedback visual ao passar o mouse:
+- Escala: Aumenta 5% (transform: scale(1.05))
+- Cor de fundo: Gradiente verde claro
+- Sombra: Intensificada para criar elevação
+- Z-index: Célula fica acima das outras
+
+3.3 Responsividade e Acessibilidade
+- Tabelas com largura de 90% para adaptação a diferentes telas
+- overflow-x: auto no body para scroll horizontal
+- Cores contrastantes para melhor legibilidade
+- Transições suaves para conforto visual
+
+3.4 Modo Escuro Automático
+Implementado automaticamente entre 22h e 6h:
+- Fundo escuro (#1a1a1a) com texto branco
+- Tabelas com tons de cinza (#2d2d2d, #333)
+- Reduz fadiga visual em ambientes com pouca luz
+
+3.5 Animações CSS
+- Bounce: Efeito de pulo no indicador de easter egg
+- Rainbow: Transição de cores do arco-íris
+- Disco: Rotação com mudança de cores
+- Matrix: Efeito verde fosforescente inspirado no filme
+- Shake: Tremor lateral para feedback visual
+
+---
+
+4. INTERATIVIDADE JAVASCRIPT
+
+4.1 Arquitetura do Código
+O JavaScript está organizado em duas classes principais:
+- TableInteractions: Gerencia todas as interações com as tabelas
+- TableGames: Implementa o jogo de memória
+
+4.2 Funcionalidades Implementadas
+
+4.2.1 Efeito Ripple
+Ao clicar em uma célula, cria-se um efeito de onda:
+- Cria elemento div dinamicamente
+- Aplica animação CSS de expansão
+- Remove elemento após 600ms
+
+4.2.2 Duplo Clique
+Células respondem ao duplo clique com:
+- Aplicação da classe shake-mode
+- Mudança para cor aleatória
+- Retorno à cor original após 2 segundos
+
+4.2.3 Código Konami
+Sequência clássica de videogame (↑↑↓↓←→←→BA):
+- Ativa modo arco-íris em todo o body
+- Todas as células ganham efeito rainbow
+- Efeito ripple em cascata
+- Mensagem de confirmação
+
+4.2.4 Easter Eggs Secretos
+Células com atributo data-secret ativam efeitos especiais:
+- rainbow: Modo arco-íris na célula
+- disco: Modo discoteca em todas as células
+- matrix: Efeito Matrix na célula
+- konami: Dica sobre o código Konami
+
+4.2.5 Indicador de Hora Dinâmico
+Emoji no canto superior direito muda conforme o horário:
+- 🌅 Manhã (6h-12h)
+- ☀️ Tarde (12h-18h)
+- 🌆 Entardecer (18h-22h)
+- 🌙 Noite (22h-6h)
+
+4.2.6 Células do Horário Interativas
+Células vazias do horário podem ser preenchidas:
+- Clique adiciona emoji aleatório (📚💻🔬📊🎨🏃‍♂️)
+- Cor de fundo aleatória
+- Simula adição de disciplinas
+
+4.2.7 Detecção de Padrões
+Sistema detecta cliques repetidos:
+- Triple Click: Clicar 3 vezes na mesma célula aumenta seu tamanho
+- Mantém histórico dos últimos 5 cliques
+- Feedback visual com mensagem secreta
+
+4.2.8 Jogo de Memória
+Ativado com Ctrl+M:
+- Gera sequência aleatória de 5 células
+- Células piscam em amarelo em sequência
+- Desafia o usuário a memorizar o padrão
+
+---
+
+5. TECNOLOGIAS E CONCEITOS APLICADOS
+
+5.1 HTML5
+- Estrutura semântica com <table>, <tr>, <td>, <th>
+- Atributos colspan e rowspan para mesclagem
+- Data attributes (data-secret, data-table) para metadados
+- Classes CSS para estilização e JavaScript
+
+5.2 CSS3
+- Animações e transições
+- Gradientes lineares
+- Pseudo-classes (:hover, :active)
+- Transformações 2D (scale, rotate, translate)
+- Media queries implícitas via JavaScript
+
+5.3 JavaScript ES6+
+- Classes e orientação a objetos
+- Arrow functions
+- Template literals
+- Métodos de array (forEach, slice, every)
+- Event listeners
+- DOM manipulation
+- SetTimeout e SetInterval
+
+---
+
+6. CONCLUSÃO
+
+Este projeto demonstra a integração completa entre HTML, CSS e JavaScript para criar uma aplicação web interativa. As tabelas evoluíram de elementos estáticos para componentes dinâmicos que respondem às ações do usuário de forma intuitiva.
+
+Principais aprendizados:
+- Estruturação complexa de tabelas HTML
+- Aplicação de estilos modernos com CSS3
+- Programação orientada a objetos em JavaScript
+- Manipulação do DOM e event handling
+- Animações e transições suaves
+- Implementação de easter eggs para engajamento
+
+O resultado final é uma aplicação que demonstra competência técnica e criatividade na implementação de funcionalidades que tornam a experiência do usuário memorável e envolvente.
